@@ -6,19 +6,28 @@ using System.Threading.Tasks;
 
 namespace FruitMeasure
 {
-    public class Fruits
+    class Fruits
     {
-        //height of fruit in inches
-        public double apple = 3.5;
-        public double avocado = 6;
-        public double banana = 8;
-        public double blueberry = 0.35;
-        public double coconut = 9;
-        public double grape = 1.18;
-        public double kiwi = 2.4;
-        public double orange = 3;
-        public double pear = 7;
-        public double pineapple = 12;
-        public double watermelon = 12;
+        //returns the average height (in inches) of the fruit
+
+        public double Apple()
+        {
+            return 3.5;
+        }
+
+        public double Banana()
+        {
+            return 8;
+        }
+
+        public double Blueberry()
+        {
+            return 0.35;
+        }
+
+        public double Orange()
+        {
+            return 3;
+        }
     }
 }
