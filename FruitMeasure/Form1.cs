@@ -12,17 +12,23 @@ namespace FruitMeasure
 {
     public partial class Form1 : Form
     {
+
+        FruitCalculation fc = new FruitCalculation();
+
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string[] fruitTypes = { "Apple", "Banana", "Blueberry", "Orange", "Grape" };
+            string[] fruitTypes = { "Apple", "Avocado", "Banana", "Blueberry",
+                "Coconut", "Grape", "Kiwi", "Orange", "Pear", "Pineapple", "Watermelon"};
             //typeOfFruitBox.Items.AddRange("Apple", "Banana", "Orange", "Grape");
             typeOfFruitBox.Items.AddRange(fruitTypes);
             typeOfFruitBox.SelectedIndex = 0;
+            
         }
 
         private void typeOfFruitBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,18 +78,16 @@ namespace FruitMeasure
 
             int totalInchesHeight = feetInInches + inches;
             //convertedOutput.Text = totalInchesHeight.ToString();
-            convertedOutput.Text = Convert.ToString(calculation(totalInchesHeight, 10));
 
-            string selectedFruit = Convert.ToString(typeOfFruitBox.SelectedItem);
-            convertedOutput.Text = selectedFruit;
+            if (totalInchesHeight > 0) //little bit of cleanup, won't output a zero anymore when the user enters nothing
+            {
+                convertedOutput.Text = Convert.ToString(fc.calculation(totalInchesHeight, fc.selectedFruit(typeOfFruitBox.SelectedIndex)));
+                convertedOutput.Text += (" " + typeOfFruitBox.Text);
+            }
+
+            //int selectedFruit = typeOfFruitBox.SelectedIndex; //WE DON'T ACTUALLY NEED TO STORE THIS
+            //convertedOutput.Text = selectedFruit;
         }
 
-        //run the calculation method
-        private double calculation(int height, double fruit)
-        {
-            double answer;
-            answer = Convert.ToDouble(height) / fruit;
-            return answer;
-        }
     }
 }
