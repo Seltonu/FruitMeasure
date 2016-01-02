@@ -36,6 +36,7 @@
             this.inchesBox = new System.Windows.Forms.TextBox();
             this.convertButton = new System.Windows.Forms.Button();
             this.convertedOutput = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // typeOfFruitBox
@@ -51,16 +52,17 @@
             // heightLabel
             // 
             this.heightLabel.AutoSize = true;
-            this.heightLabel.Location = new System.Drawing.Point(41, 15);
+            this.heightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.heightLabel.Location = new System.Drawing.Point(37, 10);
             this.heightLabel.Name = "heightLabel";
-            this.heightLabel.Size = new System.Drawing.Size(48, 13);
+            this.heightLabel.Size = new System.Drawing.Size(71, 20);
             this.heightLabel.TabIndex = 1;
             this.heightLabel.Text = "HEIGHT";
             this.heightLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // feetBox
             // 
-            this.feetBox.Location = new System.Drawing.Point(12, 76);
+            this.feetBox.Location = new System.Drawing.Point(12, 51);
             this.feetBox.Name = "feetBox";
             this.feetBox.Size = new System.Drawing.Size(119, 20);
             this.feetBox.TabIndex = 2;
@@ -69,7 +71,7 @@
             // feetLabel
             // 
             this.feetLabel.AutoSize = true;
-            this.feetLabel.Location = new System.Drawing.Point(12, 51);
+            this.feetLabel.Location = new System.Drawing.Point(9, 35);
             this.feetLabel.Name = "feetLabel";
             this.feetLabel.Size = new System.Drawing.Size(34, 13);
             this.feetLabel.TabIndex = 3;
@@ -78,7 +80,7 @@
             // inchesLabel
             // 
             this.inchesLabel.AutoSize = true;
-            this.inchesLabel.Location = new System.Drawing.Point(12, 121);
+            this.inchesLabel.Location = new System.Drawing.Point(9, 74);
             this.inchesLabel.Name = "inchesLabel";
             this.inchesLabel.Size = new System.Drawing.Size(47, 13);
             this.inchesLabel.TabIndex = 4;
@@ -87,7 +89,7 @@
             // 
             // inchesBox
             // 
-            this.inchesBox.Location = new System.Drawing.Point(12, 146);
+            this.inchesBox.Location = new System.Drawing.Point(12, 90);
             this.inchesBox.Name = "inchesBox";
             this.inchesBox.Size = new System.Drawing.Size(119, 20);
             this.inchesBox.TabIndex = 5;
@@ -105,17 +107,28 @@
             // 
             // convertedOutput
             // 
-            this.convertedOutput.Location = new System.Drawing.Point(151, 146);
+            this.convertedOutput.Location = new System.Drawing.Point(10, 160);
             this.convertedOutput.Name = "convertedOutput";
             this.convertedOutput.Size = new System.Drawing.Size(121, 20);
             this.convertedOutput.TabIndex = 7;
             this.convertedOutput.TextChanged += new System.EventHandler(this.convertedOutput_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(24, 137);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 20);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "RESULTS";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.convertedOutput);
             this.Controls.Add(this.convertButton);
             this.Controls.Add(this.inchesBox);
@@ -142,6 +155,7 @@
         private System.Windows.Forms.TextBox inchesBox;
         private System.Windows.Forms.Button convertButton;
         private System.Windows.Forms.TextBox convertedOutput;
+        private System.Windows.Forms.Label label1;
     }
 }
 
