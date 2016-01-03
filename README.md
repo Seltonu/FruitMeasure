@@ -9,5 +9,5 @@ Version 1.0:
 //TODO:
 >Optimize, optimize, optimize! Even for such a simple program, RAM is through the roof.
 Every time the fruit image is switched, that adds 6-8MB of RAM usage. Why? The pictures aren't even a MB each.
->Measure fruits myself at the market soon, for more reliable measurement data.
+>Also, measure fruits myself at the market soon, for more reliable measurement data.
 >Potentially add more fruits?
