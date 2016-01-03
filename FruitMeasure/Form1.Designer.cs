@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.typeOfFruitBox = new System.Windows.Forms.ComboBox();
             this.heightLabel = new System.Windows.Forms.Label();
             this.feetBox = new System.Windows.Forms.TextBox();
@@ -37,6 +38,9 @@
             this.convertButton = new System.Windows.Forms.Button();
             this.convertedOutput = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.developers = new System.Windows.Forms.Label();
+            this.fruitPicture = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.fruitPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // typeOfFruitBox
@@ -53,11 +57,11 @@
             // 
             this.heightLabel.AutoSize = true;
             this.heightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.heightLabel.Location = new System.Drawing.Point(37, 10);
+            this.heightLabel.Location = new System.Drawing.Point(12, 10);
             this.heightLabel.Name = "heightLabel";
-            this.heightLabel.Size = new System.Drawing.Size(71, 20);
+            this.heightLabel.Size = new System.Drawing.Size(122, 20);
             this.heightLabel.TabIndex = 1;
-            this.heightLabel.Text = "HEIGHT";
+            this.heightLabel.Text = "YOUR HEIGHT";
             this.heightLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // feetBox
@@ -107,7 +111,7 @@
             // 
             // convertedOutput
             // 
-            this.convertedOutput.Location = new System.Drawing.Point(10, 160);
+            this.convertedOutput.Location = new System.Drawing.Point(12, 160);
             this.convertedOutput.Name = "convertedOutput";
             this.convertedOutput.Size = new System.Drawing.Size(121, 20);
             this.convertedOutput.TabIndex = 7;
@@ -117,17 +121,39 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(24, 137);
+            this.label1.Location = new System.Drawing.Point(30, 137);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 20);
             this.label1.TabIndex = 8;
             this.label1.Text = "RESULTS";
             // 
+            // developers
+            // 
+            this.developers.AutoSize = true;
+            this.developers.Location = new System.Drawing.Point(124, 252);
+            this.developers.Name = "developers";
+            this.developers.Size = new System.Drawing.Size(155, 13);
+            this.developers.TabIndex = 10;
+            this.developers.Text = "CC 2016 Steven and Dani v1.0";
+            // 
+            // fruitPicture
+            // 
+            this.fruitPicture.Location = new System.Drawing.Point(151, 51);
+            this.fruitPicture.Name = "fruitPicture";
+            this.fruitPicture.Size = new System.Drawing.Size(121, 129);
+            this.fruitPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fruitPicture.TabIndex = 9;
+            this.fruitPicture.TabStop = false;
+            this.fruitPicture.Click += new System.EventHandler(this.fruitPicture_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(284, 267);
+            this.Controls.Add(this.developers);
+            this.Controls.Add(this.fruitPicture);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.convertedOutput);
             this.Controls.Add(this.convertButton);
@@ -137,9 +163,11 @@
             this.Controls.Add(this.feetBox);
             this.Controls.Add(this.heightLabel);
             this.Controls.Add(this.typeOfFruitBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Fruit Measure";
+            this.Text = " Fruit Measure";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.fruitPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,8 +182,10 @@
         private System.Windows.Forms.Label inchesLabel;
         private System.Windows.Forms.TextBox inchesBox;
         private System.Windows.Forms.Button convertButton;
-        private System.Windows.Forms.TextBox convertedOutput;
+        public System.Windows.Forms.TextBox convertedOutput;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.PictureBox fruitPicture;
+        private System.Windows.Forms.Label developers;
     }
 }
 

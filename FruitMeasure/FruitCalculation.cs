@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace FruitMeasure
 {
     public class FruitCalculation
     {
+
         Fruits fruits = new Fruits();
         //run the calculation method, divide human height by fruit height
         public double calculation(int height, double fruit)
@@ -20,11 +22,15 @@ namespace FruitMeasure
         public double selectedFruit(int index)
         {
             double fruitHeight = 0;
+            //Form1 Form1 = new Form1();
+           // form = System.Windows.Forms.Form.ActiveForm;
 
             switch(index)
             {
                 case 0: //Apple
                     fruitHeight = fruits.apple;
+                    //Form1.convertedOutput.Text += " worked";
+                    //fruitPicture.Image = apple.png;
                     break;
                 case 1: //Avocado
                     fruitHeight = fruits.avocado;
@@ -63,5 +69,10 @@ namespace FruitMeasure
 
             return fruitHeight;
         }
+
+       // public static void testButt(Form1 form)
+        //{
+            //form.convertedOutput.Text += " worked";
+       // }
     }
 }
